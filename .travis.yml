@@ -4,6 +4,12 @@ language: R
 sudo: false
 cache: packages
 
+arch:
+  - amd64
+  - ppc64le
+  - s390x
+  - arm64
+
 after_success:
   - Rscript -e 'covr::codecov()'
 
